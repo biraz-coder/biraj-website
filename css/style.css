@@ -1,4 +1,4 @@
-/*  Base Styles*/
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
 }
 
-/* Navigation Bar*/
+/* Navigation Bar */
 #navbar {
     display: flex;
     align-items: center;
@@ -25,17 +25,16 @@ body {
 #logo-container {
     display: flex;
     align-items: center;
-
 }
 
 .logo-img {
     width: 60px;
     height: auto;
     margin-right: 10px;
-    /* Space between logo and text */
     border-radius: 50px;
     cursor: pointer;
 }
+
 .logo-text {
     font-size: 35px;
     font-weight: bold;
@@ -43,7 +42,6 @@ body {
     cursor: pointer;
     text-decoration: none;
 }
-
 
 /* Navigation links */
 #navbar ul {
@@ -77,7 +75,6 @@ body {
     min-height: 90vh;
     color: black;
     position: relative;
-  
 }
 
 #home::before {
@@ -138,13 +135,12 @@ body {
     background-color: #45a049;
 }
 
-/* Sections*/
+/* Sections */
 .section {
     padding: 60px 20px;
     text-align: center;
 }
 
-/* About, Skills, Contact Section Text */
 .section h2 {
     padding: 20px 0;
     font-size: 2.2rem;
@@ -185,8 +181,8 @@ body {
 }
 
 .portfolio-item img:hover {
-   background: #0e7d14;
-   cursor: pointer;
+    background: #0e7d14;
+    cursor: pointer;
 }
 
 .portfolio-item h3 {
@@ -201,7 +197,6 @@ body {
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-
 }
 
 .skills-list li {
@@ -212,12 +207,10 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
 }
 
 .skills-list li:hover {
     background: #0e7d14;
-
 }
 
 .skills-list a {
@@ -292,7 +285,7 @@ body {
     cursor: pointer;
 }
 
-/*Footer*/
+/* Footer */
 footer {
     background: #222;
     color: #ccc;
@@ -300,15 +293,98 @@ footer {
     padding: 20px 0;
     font-size: 0.9rem;
 }
-/* Responsive Design */
+
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
+
+    /* Navbar collapses */
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #navbar ul li {
+        width: 100%;
+    }
+
+    #navbar ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* Home Section */
+    #home h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+    }
+
+    #home p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .btn,
+    .resume-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    /* Portfolio Items Stack */
+    #portfolio .portfolio-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Video and Audio Resize */
+    video,
+    audio {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Contact Section */
     .contact-content {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  
+
+    .contact-info {
+        padding: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-item img {
+        margin-bottom: 10px;
+    }
+
+    /* Skills Stack */
     .skills-list {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
+
+    /* General Spacing and Text Scaling */
+    .section {
+        padding: 30px 15px;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
